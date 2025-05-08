@@ -81,7 +81,13 @@ export default function MedicalCoTApp() {
                 content: [
                   {
                     type: "text",
-                    text: `你是一位专业的医学影像讲师，请根据图像进行结构观察与教学分析，不进行医学诊断。\n请描述图像中的结构异常、特征性区域、影像对称性、密度变化等，并提出可能值得进一步检查的方向。`
+                    text: `你是一位医学图像智能分析助手，请参考图像内容进行深入医学解读与分析。你可以识别结构变化、密度分布、对称性、病变特征等，提供类医学分析建议和教学参考内容。你可以输出推测性描述和结构化内容。
+
+请完成以下任务：
+1. 识别图像中的解剖结构和可能存在的异常区域。
+2. 描述可疑区域的边界、密度、位置、分布等特征。
+3. 提出可能的医学解释（不作为诊断），使用专业术语。
+4. 输出完整的分析推理过程，包括观察、假设、证据支持与结论形成。`
                   },
                   {
                     type: "image_url",
@@ -172,16 +178,14 @@ export default function MedicalCoTApp() {
       <div className="mb-4 flex gap-2 items-center">
         <span className="font-medium">选择模型：</span>
         <Button
-  variant={provider === "gpt4o" ? "default" : "outline"}
   onClick={() => setProvider("gpt4o")}
-  className={provider === "gpt4o" ? "ring-2 ring-blue-500" : ""}
+  className={`px-4 py-2 border rounded ${provider === "gpt4o" ? "bg-blue-600 text-white" : "bg-white text-gray-800 border-gray-300"}`}
 >
   医学讲解助手
 </Button>
         <Button
-  variant={provider === "llava" ? "default" : "outline"}
   onClick={() => setProvider("llava")}
-  className={provider === "llava" ? "ring-2 ring-green-500" : ""}
+  className={`px-4 py-2 border rounded ${provider === "llava" ? "bg-green-600 text-white" : "bg-white text-gray-800 border-gray-300"}`}
 >
   智能诊断模型
 </Button>
