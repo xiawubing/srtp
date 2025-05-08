@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@huggingface/inference':
+        specifier: ^3.12.1
+        version: 3.12.1
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.3)
@@ -85,6 +88,17 @@ packages:
   '@eslint/plugin-kit@0.2.8':
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@huggingface/inference@3.12.1':
+    resolution: {integrity: sha512-gRnRHZkVAb7mzmPnLcFrttA17yZdUiz+xLqk19FBwCsCjBBlcDCXVIrZ3RW1DdZq297PB6m6t995600sDq3T6g==}
+    engines: {node: '>=18'}
+
+  '@huggingface/jinja@0.4.1':
+    resolution: {integrity: sha512-3WXbMFaPkk03LRCM0z0sylmn8ddDm4ubjU7X+Hg4M2GOuMklwoGAFXp9V2keq7vltoB/c7McE5aHUVVddAewsw==}
+    engines: {node: '>=18'}
+
+  '@huggingface/tasks@0.19.3':
+    resolution: {integrity: sha512-+wfh60cGucPRlesd9Q9BFKHqLPaYB4FbNbFonlVFBm+rTVkSLXBU3iiv/0MUofR3H2rhrRlKT5QQ5oSmr6BhsA==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1058,6 +1072,15 @@ snapshots:
     dependencies:
       '@eslint/core': 0.13.0
       levn: 0.4.1
+
+  '@huggingface/inference@3.12.1':
+    dependencies:
+      '@huggingface/jinja': 0.4.1
+      '@huggingface/tasks': 0.19.3
+
+  '@huggingface/jinja@0.4.1': {}
+
+  '@huggingface/tasks@0.19.3': {}
 
   '@humanfs/core@0.19.1': {}
 
