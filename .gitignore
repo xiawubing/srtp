@@ -1,0 +1,17 @@
+# ✅ .gitignore — 忽略不应上传的文件和目录
+node_modules/
+.next/
+out/
+dist/
+
+# 忽略所有环境变量（包含 API 密钥）
+.env.local
+.env
+.env.*
+
+# 忽略日志和系统缓存
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+.DS_Store
+.env.local
